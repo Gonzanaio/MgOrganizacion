@@ -19,9 +19,9 @@
 
 @media (max-width: 800px) {
   .container-fluid {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around !important;
     min-height: 0;
   }
   .header-nav {

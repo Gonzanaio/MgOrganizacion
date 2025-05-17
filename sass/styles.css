@@ -84,9 +84,9 @@ h2 {
 
 @media (max-width: 800px) {
   .container-fluid {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around !important;
     min-height: 0;
   }
   .header-nav {
@@ -120,7 +120,7 @@ h2 {
 
 .logo {
   width: 15vw;
-  margin: 0px 0px;
+  margin: 0px;
   padding: 0px;
 }
 .logo:hover {
@@ -145,7 +145,6 @@ h2 {
   }
   .logo {
     width: 65vw;
-    margin: 0px 0px;
     padding: 0px;
   }
 }
@@ -187,15 +186,22 @@ h2 {
   color: white;
 }
 .texto .btn {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
   font-size: 2rem;
   width: 80%;
   border: 1px solid #3f5a40;
   background-color: #527853;
   font-family: var(--font-opc);
+  transition: background-color 0.5s ease;
 }
 .texto .btn:hover {
   background-color: #3f5a40;
   color: white;
+}
+.texto .btn:active {
+  animation: pulse 0.5s;
 }
 
 @media (max-width: 800px) {
@@ -216,7 +222,6 @@ h2 {
   }
   .texto h2 {
     font-size: 2rem;
-    margin: 0 0px 20px 50px;
     text-align: justify;
     text-justify: inter-word;
     color: white;
@@ -384,11 +389,28 @@ h2 {
   border-radius: 60px;
   margin: 20px 20px;
 }
-#servicio .--content-text-p {
-  font-size: 1.5rem;
+#servicio .content .--content-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  margin: 0px;
+}
+#servicio .--content-h2 {
+  font-size: 2rem;
   width: 80%;
   text-align: center;
   margin-right: 30px;
+  color: white;
+  text-decoration: underline;
+}
+#servicio .--content-text-p {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0px;
 }
 @media (max-width: 800px) {
   #servicio .content {
@@ -423,7 +445,6 @@ h2 {
   flex-direction: column;
   width: 100%;
   height: 100%;
-  background-color: rgba(82, 120, 83, 0.8196078431);
   font-family: var(--font-opc);
   color: black;
 }
@@ -445,6 +466,7 @@ h2 {
   padding-top: 4rem;
   background-color: rgba(82, 120, 83, 0.8196078431);
   margin: 10px;
+  border-radius: 10px;
 }
 #contacto .content .--content-card .--content-card-contact h2 {
   text-decoration: underline;
@@ -457,9 +479,11 @@ h2 {
   overflow: hidden;
 }
 #contacto .content .formulario {
-  width: 95%;
-  margin: 20px;
+  background-color: rgba(82, 120, 83, 0.8196078431);
+  width: 100%;
+  padding: 20px;
   color: white;
+  border-radius: 10px;
 }
 #contacto .btn {
   background-color: var(--nav-a);
@@ -472,11 +496,15 @@ h2 {
   margin-top: 20px;
   width: 20vw;
   height: 10vh;
+  transition: background-color 0.5s ease;
 }
 #contacto .btn:hover {
   background-color: #f9e8d9;
   color: black;
   font-size: 2rem;
+}
+#contacto .btn:active {
+  animation: pulse 0.5s;
 }
 @media (max-width: 800px) {
   #contacto #contacto {
@@ -537,8 +565,8 @@ h2 {
   margin: 30px;
   padding: 15px;
   display: flex;
-  flex-flow: column wrap;
-  align-content: space-around;
+  flex-flow: row nowrap;
+  justify-content: space-around;
   align-items: center;
 }
 .footer-pie .content {
@@ -549,6 +577,11 @@ h2 {
   font-size: 0.75rem;
   margin: 10px;
   font-family: var(--font-principal);
+  text-decoration: none;
+}
+.footer-pie a :link {
+  color: var(--nav-text);
+  text-decoration: none;
 }
 .footer-pie span {
   font-size: 1vw;
@@ -566,6 +599,10 @@ h2 {
 
 @media (max-width: 800px) {
   .footer-pie ul {
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-content: space-around;
     margin: 10px;
   }
   .footer-pie a {

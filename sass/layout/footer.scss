@@ -9,8 +9,8 @@
     margin: 30px;
     padding: 15px;
     display: flex;
-    flex-flow: column wrap;
-    align-content: space-around;
+    flex-flow: row nowrap;
+    justify-content: space-around;
     align-items: center;
   }
 
@@ -22,6 +22,11 @@
     font-size: 0.75rem;
     margin: 10px;
     font-family: var(--font-principal);
+    text-decoration: none;
+    :link{
+      color: var(--nav-text);
+      text-decoration: none;
+    }
   }
 
   span {
@@ -43,6 +48,10 @@
 @media (max-width: 800px) {
   .footer-pie {
     ul {
+      flex-flow: column wrap;
+      justify-content: space-around;
+      align-items: flex-start;
+      align-content: space-around;
       margin: 10px;
     }
     a {
