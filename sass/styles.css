@@ -528,7 +528,7 @@ h2 {
 #contacto .btn:active {
   animation: pulse 0.5s;
 }
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   #contacto {
     display: flex;
     flex-direction: row;
