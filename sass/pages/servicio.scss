@@ -5,11 +5,12 @@
   background-color: #527853 !important;
   .content {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction:row-reverse;
     width: 90vw;
     margin: 0px;
     border-radius: 30px;
     background-color: rgba(255, 255, 255, 0.2);
+    padding: 0 5rem;
 
     .imagen {
       width: 100%;
@@ -34,6 +35,13 @@
     }
   }
   .--content-h2 {
+    width: 80%;
+    text-align: center;
+    margin-right: 30px;
+    color: white;
+    text-decoration: underline;
+  }
+  .--content-h3 {
     font-size: 2rem;
     width: 80%;
     text-align: center;
@@ -53,6 +61,7 @@
       width: 87vw;
       height: auto;
       flex-direction: column-reverse;
+      padding: 0px;
       .--content-text-p {
         font-size: 2rem;
         text-align: center;

@@ -34,11 +34,15 @@
 @media (max-width: 800px) {
   .navegacion {
     margin-top: 2rem;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    .nav-item{
+      margin: 10px 0px;
+    }
     a {
-      font-size: 2vw;
-      margin: 0px 10px;
+      font-size: 5vw!important;
+      margin: 0px 10px ! important;
       overflow: hidden;
       text-overflow: ellipsis;
     }
